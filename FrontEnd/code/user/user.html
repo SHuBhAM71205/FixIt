@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fix It</title>
+
+    <link rel="stylesheet" href="user.css" />
+</head>
+
+<body>
+    <div class="left-nav flex-col" >
+        <button id="left-nav-open-close-button" onclick=""><strong>X</strong></button>
+        <div class="user-info-left-nav">
+
+            <img src="./asset/man-icon-illustration-vector.jpg" alt="No image" id="user-img" />
+            <h1>Hii,Shubham</h1>
+        </div>
+
+        <div class="nav">
+            <div class="button" id="b1">Home</div>
+            <div class="button" id="b5">Login</div>
+            <div class="button" id="b4">About</div>
+        </div>
+    </div>
+
+    <main class="main-content flex-col">
+
+        <div class="login-signup flex-col">
+            <div class="btn flex-row">
+                <div id="Login" onclick="loginClicked()">Login</div>
+                <div id="Sign-up">Sign Up</div>
+            </div>
+
+            <form action="./" method="post" class="flex-col" id="form-login-signup">
+                <label for="first">
+                    Username:
+                </label>
+                <input type="text" id="first" name="first" placeholder="Enter your Username" required>
+
+                <label for="password">
+                    Password:
+                </label>
+
+                <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+
+                <button type="submit" id="submit-btn">
+                    Login
+                </button>
+        </div>
+        </form>
+        </div>
+    </main>
+
+    <script src="./user.js"></script>
+</body>
+
+</html>
