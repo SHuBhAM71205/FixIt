@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://kit.fontawesome.com/7eb41a9bdc.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="navigation">
+        <button class="btn-trans" id="sidebar">
+            <i class="fa-solid fa-angles-left fa-2xl ani-pop"></i>
+        </button>
+        <div class="brand">
+            <div class="brand-name">FixIt</div>
+
+        </div>
+        <div class="profile">
+            <div class="profile-img">
+                <img src="./Source/default-profile-img.jpg" alt="">
+            </div>
+            <div class="profile-name">
+                Jeel Kalathiya
+            </div>
+        </div>
+
+
+        <ul class="link-container">
+            <li class="link-item" id="NavDashboard">
+                <a href="Dashboard.html">
+                    <div class="link-icon"><i class="fa-solid fa-chart-simple fa-lg"></i></div>
+                <div class="link-text">Dashboard</div>
+                </a>
+            </li>
+            <li class="link-item" id="NavRequests">
+                <a href="Requests.html">
+                    <div class="link-icon"><i class="fa-solid fa-bullhorn fa-lg"></i></div>
+                <div class="link-text">Requests</div>
+                </a>
+            </li>
+            <li class="link-item" id="NavTaskMasters">
+                <a href="TaskMasters.html">
+                    <div class="link-icon"><i class="fa-solid fa-users fa-lg"></i></div>
+                <div class="link-text">Task Masters</div>
+                </a>
+            </li>
+            <li class="link-item active" id="NavReports">
+                <a href="Reports.html">
+                    <div class="link-icon"><i class="fa-solid fa-file-lines fa-lg"></i></div>
+                <div class="link-text">Reports</div>
+                </a>
+            </li>
+        </ul>
+
+        <button class="btn-logout">
+            Log Out
+        </button>
+
+    </div>
+    <div id="content-canvas">
+        <div class="canvas-heading">
+            Reports
+        </div>
+
+        
+    </div>
+
+    <script src="./Scripts/script.js"></script>
+</body>
+
+</html>
