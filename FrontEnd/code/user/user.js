@@ -1,25 +1,32 @@
-const btn=document.querySelectorAll(".button")
+const btns = document.querySelectorAll(".button");
+const main = document.querySelector(".main-content");
 
-const leftNav=document.getElementsByClassName("left-nav")
+let prevButton = null; 
 
+const btnClickHandle = (event) => {
+    const button = event.target;
+    const id = button.id;
 
-
-const btnClickHandel=(event)=>{
-    const id=event.target.id;
-    const main=document.querySelector(".main-content");   
-    if(id=='b1'){
-        main.innerHTML="hello";
+    if (prevButton && prevButton !== button) {
+        prevButton.style.backgroundColor = "";
+        prevButton.style.color = "";
     }
-    else if(id=="b5"){
-        main.innerHTML="";
-    }
-    else{
-        main.innerHTML="";
-    }
-}
 
-btn.forEach(button=>{
-        button.addEventListener("click",btnClickHandel);
-}
-)
+    button.style.backgroundColor = "white";
+    button.style.color = "black";
+    button.style.marginLeft="6px";
 
+    if (id === "b1") {
+        main.innerHTML = "hello";
+    } else if (id === "b5") {
+        main.innerHTML = "Button 5 clicked";
+    } else {
+        main.innerHTML = "";
+    }
+
+    prevButton = button;
+};
+
+btns.forEach((button) => {
+    button.addEventListener("click", btnClickHandle);
+});
