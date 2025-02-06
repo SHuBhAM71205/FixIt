@@ -12,10 +12,16 @@
 *{
     margin: 0px;
     padding: 0px;
-    
+    text-align: center;
 }
 
-
+body{
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    background: url(./asset/bgTexture1.jpg) rgba(252, 206, 146, 0.425); 
+    background-position: center;
+}
 /* ---------------------------general class---------------------------------------------------------- */
 
 .flex-row{
@@ -40,9 +46,10 @@
 }
 
 #left-nav-open-close-button{
-    background-color: #0F1035;
+    background-color: #080a4b;
     color: aliceblue;
-    border-radius: 45%;
+    border: 2px solid rgb(0, 4, 255);
+    margin: 20px 20px 20px 20px;
     font-size: larger;
     align-self: flex-end;
     margin-right: 19px;
@@ -50,8 +57,7 @@
 
 #user-img{
     background-color: aliceblue;
-    width: 100px;
-    height: 100px;
+    width: 10vw;
     border-radius: 50%;
     border: 7px solid rgb(115, 114, 126);
     align-content: center;
@@ -59,9 +65,10 @@
     
 }
 
+
 .button{
     text-align: center;
-    font-size:xxx-large;
+    font-size:xx-large;
     color: aliceblue;
     border-radius: 10px;
     width: 100%;
@@ -77,20 +84,22 @@
 .button:hover{
     background-color: aliceblue;
     color: black;
-    margin-left: 6px;
+    margin-left: 1vw;
     border-radius: 10px 0px 0px 10px;
+    border: 0px solid #DCF2F1; ;
 }
 
 /* -----------------------content---------------------------- */
 
 .main-content{
-    position:absolute;
     right:0px;
     top:0px;
-    background: url(./asset/bgTexture1.jpg) rgba(252, 206, 146, 0.425); 
+    
+    background-repeat: space;
     min-width: 80vw;
-    max-width: 100vh;
+    max-width: 100vw;
     min-height: 100vh;
+    max-height: 100vh;
     justify-content: center;
     align-items: center;
 }
@@ -99,7 +108,7 @@
     background-color: antiquewhite;
     flex-direction: column;
     min-width: 25vw;
-    min-height: 70vh;
+    min-height: 25vh;
     border: 4px solid #00000036;
     border-radius: 8px;
 }
@@ -154,7 +163,7 @@ input{
     color: antiquewhite;
     border-radius: 8px;
     height: 5vh;
-    margin-top: 20vh;
+    margin-top: 50%;
     width: 13vw;
 }
 

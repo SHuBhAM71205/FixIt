@@ -1,32 +1,31 @@
 const btns = document.querySelectorAll(".button");
 const main = document.querySelector(".main-content");
-
-let prevButton = null; 
+// nav button click handel
+let prevButton = null;
 
 const btnClickHandle = (event) => {
-    const button = event.target;
-    const id = button.id;
+  const button = event.target;
+  const id = button.id;
 
-    if (prevButton && prevButton !== button) {
-        prevButton.style.backgroundColor = "";
-        prevButton.style.color = "";
-    }
+  if (prevButton && prevButton !== button) {
+    prevButton.style.backgroundColor = "";
+    prevButton.style.color = "";
+  }
 
-    button.style.backgroundColor = "white";
-    button.style.color = "black";
-    button.style.marginLeft="6px";
+  button.style.backgroundColor = "white";
+  button.style.color = "black";
+  button.style.marginLeft = "6px";
 
-    if (id === "b1") {
-        main.innerHTML = "hello";
-    } else if (id === "b5") {
-        main.innerHTML = "Button 5 clicked";
-    } else {
-        main.innerHTML = "";
-    }
+  if (id === "b1") {
+    main.innerHTML = "";
+  } else if (id === "b5") {
+  } else {
+    main.innerHTML = "";
+  }
 
-    prevButton = button;
+  prevButton = button;
 };
 
 btns.forEach((button) => {
-    button.addEventListener("click", btnClickHandle);
+  button.addEventListener("click", btnClickHandle);
 });
