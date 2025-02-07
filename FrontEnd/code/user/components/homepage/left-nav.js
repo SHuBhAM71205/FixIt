@@ -15,6 +15,7 @@ const btnClickHandle = (event) => {
   button.style.backgroundColor = "white";
   button.style.color = "black";
   button.style.marginLeft = "6px";
+  button.style.textOverflow = "clip";
 
   if (id === "b1") {
     
@@ -22,8 +23,11 @@ const btnClickHandle = (event) => {
    else if (id === "b5") {
   
   }
-   else {
+   else if (id ==="b2"){
     
+  }
+  else{
+
   }
 
   prevButton = button;

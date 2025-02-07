@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <link rel="stylesheet" href="../../user.css">
-</head>
-<body>
-    <div class="left-nav flex-col" >
-        <span id="left-nav-open-close-button">x</span>
+    <link rel="stylesheet" href="../../user.css" />
+    <script src="https://kit.fontawesome.com/7803942065.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="flex-row homepg-body">
+      <div class="left-nav flex-col">
+        <span class="left-nav-open-close-button">	<i class="fa fa-angle-double-left"></i></span>
         <div class="user-info-left-nav">
-
-            <span><img src="../../asset/man-icon-illustration-vector.jpg" alt="No image" id="user-img" /></span>
+          <span
+            ><img
+              src="../../asset/man-icon-illustration-vector.jpg"
+              alt="No image"
+              id="user-img"
+          /></span>
         </div>
 
         <div class="nav">
-            <div class="button" id="b1">Request Maintence</div>
-            <div class="button" id="b5">Track Request</div>
-            <div class="button" id="b4">History</div>
-            <div class="button" id="b2">Feedback</div>
-            <button id="logout">Log Out</button>
+            <div class="button" id="b1" >
+              <p>Request Maintenance</p>
+              </div>
+          <div class="button" id="b5"><i class="fas fa-cloud"></i>Track Request</div>
+          <div class="button" id="b4">History</div>
+          <div class="button" id="b2">Feedback</div>
+          <button id="logout">Log Out</button>
         </div>
-    </div>
+      </div>
 
-    <main class="flex-row">
-        <header class="main-header"></header>
-        <div class="main-content "></div>    
-    </main>
+        <div class="homepg-main-content">gjhjj</div>
+    </div>
     <script src="left-nav.js"></script>
-</body>
+  </body>
 </html>
