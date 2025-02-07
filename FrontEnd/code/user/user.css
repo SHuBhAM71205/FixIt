@@ -81,20 +81,14 @@ body{
     border-radius: 10px;
     width: 100%;
     padding-left: 2px;
+    padding-top: 1px;
     margin-top: 25px;
     margin-bottom: 25px;
     cursor: pointer;
     text-overflow: hidden ;
 }
 
-@container lnav (max-width : 10vw){
-    #b1 > p{
-        
-    }
-    .left-nav-open-close-button{
-      visibility:hidden;
-    }
-}
+
 
 .nav {
     width: 100%;
@@ -114,7 +108,7 @@ body{
 
 #logout{
     text-align: center;
-    font-size: 2vw;
+    font-size: 1.1rem;
     color: rgb(219, 238, 255);
     background-color: rgb(255, 38, 0);
     border-radius: 10px;
