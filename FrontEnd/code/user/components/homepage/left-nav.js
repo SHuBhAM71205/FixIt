@@ -17,10 +17,13 @@ const btnClickHandle = (event) => {
   button.style.marginLeft = "6px";
 
   if (id === "b1") {
-    main.innerHTML = "";
-  } else if (id === "b5") {
-  } else {
-    main.innerHTML = "";
+    
+  }
+   else if (id === "b5") {
+  
+  }
+   else {
+    
   }
 
   prevButton = button;
@@ -28,4 +31,4 @@ const btnClickHandle = (event) => {
 
 btns.forEach((button) => {
   button.addEventListener("click", btnClickHandle);
-});
+});     
