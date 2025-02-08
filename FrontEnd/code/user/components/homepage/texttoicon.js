@@ -44,4 +44,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-con
+// const collapse=document.querySelector('.left-nav-open-close-button')
+
+// const nav=document.querySelector('.left-nav')
+
+
+// collapse.addEventListener('click',()=>{
+//     nav.style.width='6vw';
+// });

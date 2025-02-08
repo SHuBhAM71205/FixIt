@@ -14,7 +14,9 @@ const btnClickHandle = (event) => {
 
   button.style.backgroundColor = "white";
   button.style.color = "black";
-  button.style.marginLeft = "4px";
+  button.style.borderTopRightRadius = "0px";
+  
+  button.style.borderBottomRightRadius = "0px";
   button.style.textOverflow = "clip";
 
   if (id === "b1") {
