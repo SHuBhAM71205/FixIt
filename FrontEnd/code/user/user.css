@@ -37,10 +37,9 @@ body{
     min-height:100vh;
     max-height:100vh;
     width: 6vw;
-    left:0;
     align-items: center;
     justify-content:space-around;
-    transition: width 1s 50ms ease-in-out;
+    transition: width 1s .5s ease-in-out;
     container-name: lnav ;
     container-type: inline-size;
 }
@@ -53,14 +52,16 @@ body{
 
 }
 
-#left-nav-open-close-button{
+#left-nav-open-close-button{ 
     background-color: #080a4b;
     color: aliceblue;
     border: 2px solid rgb(0, 4, 255);
     margin: 20px 20px 20px 20px;
     font-size: larger;
-    align-self: flex-end;
-    margin-right: 19px;
+}
+
+#left-nav-open-close-button:hover{
+  color: #DCF2F1;
 }
 
 #user-img{
@@ -71,6 +72,11 @@ body{
     align-content: center;
     justify-content: center;
     
+}
+
+.a{
+  padding-left: 80%;
+  padding-top: 10px;
 }
 
 
@@ -96,6 +102,10 @@ body{
 }
 
 .button:hover{
+  padding-left: 2px;
+    padding-top: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     background-color: aliceblue;
     color: black;
     margin-left: 0%;
@@ -117,6 +127,12 @@ body{
     margin-bottom: 25px;
 }
 
+#logout:hover{
+  background-color: #DCF2F1;
+  color: #eb5a3c;
+  border: 2px solid #eb5a3c;
+  cursor: pointer;
+}
 
 /* -----------------------login-signup---------------------------- */
 

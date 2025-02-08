@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { id: "b5", text: "Track Request", icon: '<i class="fas fa-cloud"></i>' },
         { id: "b4", text: "History", icon: '<i class="fas fa-history"></i>' },
         { id: "b2", text: "Feedback", icon: '<i class="fas fa-comment"></i>' },
-        { id: "", text: "Feedback", icon: '<i class="fas fa-comment"></i>' },
+        { id: "logout", text: "Logout", icon: '<i class="fas fa-sign-out"></i>' },
     ];
 
     const resizeObserver = new ResizeObserver(entries => {
@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     button.style.height="6vh";
                 }
             });
+            document.querySelector('.left-nav-open-close-button').style.visibility=isSmall?'hidden':'visible';
         }
     });
 
@@ -41,3 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
         resizeObserver.observe(leftNav);
     }
 });
+
+
+con
