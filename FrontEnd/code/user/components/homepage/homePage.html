@@ -10,10 +10,14 @@
   <body>
     <div class="flex-row homepg-body">
       <div class="left-nav flex-col">
-        <span class="a">
-          <i class="fas fa-angle-double-left left-nav-open-close-button"></i>
+        <span class="a" onclick="handleclosebtn()">
+          <i class="fas fa-angle-double-left left-nav-open-close-button" ></i>
         </span>
-       
+        <script>
+            function handleclosebtn(){
+              document.querySelector('.left-nav').style.width='6vw';
+            }
+        </script>
         <div class="user-info-left-nav">
           <span
             ><img

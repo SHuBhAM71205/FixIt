@@ -4,8 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>request</title>
+  <title>track request</title>
   <link rel="stylesheet" href="../../user.css" />
+  <link rel="stylesheet" href="./trackRequest.css">
+  
   <style>
     .container {
       max-width: 500px;
@@ -71,46 +73,15 @@
     </div>
     <div class="homepg-main-content flex-col">
       <div class="header flex-row">
-        <h2>Submit Your Service Request</h2>
+        <h2>Track Progress</h2>
       </div>
-
-      <form action="./" class="request-form flex-col" method="post">
-
-        <h2>Service Request Form</h2>
-        <form action="submit_service.php" method="POST">
-          <label for="name">Full Name:</label>
-          <input type="text" id="name" name="name" placeholder="Enter your Name" required>
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="Enter your Email" required>
-
-          <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="phone" placeholder="Enter your phone no." required>
-
-          <label for="service-type">Service Type:</label>
-          <select id="service-type" name="service_type" required>
-            <option value="">Select Service</option>
-            <option value="fridge">Fridge Repair</option>
-            <option value="computer">Computer Repair</option>
-            <option value="laptop">Laptop Repair</option>
-            <option value="home_appliance">Home Appliance Repair</option>
-            <option value="other">Other</option>
-          </select>
-
-          <label for="appliance-details">Appliance/Device Details:</label>
-          <input type="text" id="appliance-details" name="appliance_details" placeholder="Brand, Model, etc." required>
-
-          <label for="description">Issue Description:</label>
-          <textarea id="description" name="description" rows="4" placeholder="Describe the problem..."
-            required></textarea>
-
-          <button type="submit">Submit Request</button>
-        </form>
+      <div class="request-track">
+        <div class="no-request" onload="no_data">There is no Service request to show</div>
+        
+      </div>
     </div>
+    <script src="./addRequest.js"></script>
   </div>
-  <script>
-
-  </script>
   <script src="../homepage/texttoicon.js"></script>
   <script src="../homepage/left-nav.js"></script>
 </body>
