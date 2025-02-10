@@ -4,17 +4,17 @@ async function fetchData() {
         const data = await response.json();
 
         if (!data || data.length === 0) {  
-            document.querySelector('.no-request').style.display = 'block';
-            document.querySelector('.no-request').style.display = 'block';
+            document.querySelector('.no-history').style.display = 'block';
+            document.querySelector('.no-history').style.display = 'block';
 
         } else {
-            document.querySelector('.no-request').style.display = 'none';
+            document.querySelector('.no-history').style.display = 'none';
 
-            const progress = document.querySelector('.trackRequest');
+            const progress = document.querySelector('.requested-task-progress');
             if (progress) {
                 progress.innerHTML = '';
 
-                const progressElement = document.createElement(progress);
+                const progressElement = document.createElement('progress');
                 progressElement.value = 50;
                 progressElement.max = 100; 
                 progress.appendChild(progressElement);
