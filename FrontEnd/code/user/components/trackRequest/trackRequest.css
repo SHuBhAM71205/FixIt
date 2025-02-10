@@ -34,6 +34,7 @@
     height: 88px;
     transition : height 1s .1s ease-out;
     overflow: hidden;
+    display: block;
 }
 
 .trackRequest:hover{

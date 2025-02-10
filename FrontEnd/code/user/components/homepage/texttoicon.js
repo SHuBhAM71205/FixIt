@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { id: "b5", text: "Track Request", icon: '<i class="fas fa-cloud"></i>' },
         { id: "b4", text: "History", icon: '<i class="fas fa-history"></i>' },
         { id: "b2", text: "Feedback", icon: '<i class="fas fa-comment"></i>' },
+        { id: "b3", text: "Home", icon: '<i class="fas fa-house-user"></i>' },
         { id: "logout", text: "Logout", icon: '<i class="fas fa-sign-out"></i>' },
     ];
 

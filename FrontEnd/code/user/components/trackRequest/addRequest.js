@@ -6,6 +6,7 @@ async function fetchData() {
         if (!data || data.length === 0) {  
             document.querySelector('.no-request').style.display = 'block';
             document.querySelector('.no-request').style.display = 'block';
+            document.querySelector('.trackRequest').style.display = 'none';
 
         } else {
             document.querySelector('.no-request').style.display = 'none';
@@ -23,6 +24,8 @@ async function fetchData() {
     } catch (error) {
         console.error('Error fetching data:', error);
         document.querySelector('.no-request').style.display = 'block';
+        document.querySelector('.trackRequest').style.display = 'none';
+
     }
 }
 

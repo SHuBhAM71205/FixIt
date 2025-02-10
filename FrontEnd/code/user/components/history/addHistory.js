@@ -6,6 +6,7 @@ async function fetchData() {
         if (!data || data.length === 0) {  
             document.querySelector('.no-history').style.display = 'block';
             document.querySelector('.no-history').style.display = 'block';
+            document.querySelector('.trackHistory').style.display = 'none';
 
         } else {
             document.querySelector('.no-history').style.display = 'none';
@@ -22,7 +23,9 @@ async function fetchData() {
         }
     } catch (error) {
         console.error('Error fetching data:', error);
-        document.querySelector('.no-request').style.display = 'block';
+        document.querySelector('.no-history').style.display = 'block';
+        document.querySelector('.trackHistory').style.display = 'none';
+
     }
 }
 
