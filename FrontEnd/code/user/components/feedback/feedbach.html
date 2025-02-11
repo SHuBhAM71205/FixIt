@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home Page</title>
   <link rel="stylesheet" href="../../user.css" />
+  <link rel="stylesheet" href="./feedback.css" />
   <link rel="stylesheet" href="../../form-style.css" />
-  <link rel="stylesheet" href="feedback.css">
   <script src="https://kit.fontawesome.com/7803942065.js" crossorigin="anonymous"></script>
 </head>
 
@@ -38,12 +38,32 @@
 
       </div>
     </div>
-    <div class="homepg-main-content flex-row">
-       
+    <div class="homepg-main-content flex-col">
+      <div class="header flex-row">
+        <h2>Feedback</h2>
+      </div>
+      <div class="history-track flex-col">
+        <div class="no-history" onload="no_data">There is no feddback </div>
+        <div class="trackHistory flex-col">
+          <div class="hd flex-row">
+            <h6>Request Name</h6> <button class="feedback-btn">Feedback</button>
+            <script>
+              document.querySelector('.feedback-btn').addEventListener('click',()=>{
+                document.querySelector('.feedback-form').style.display='block';
+              })
+            </script>
+          </div>
+          <div class="Discription">
+            Discription:</br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sint unde magni accusamus harum assumenda
+            esse cupiditate vel omnis perferendis nesciunt, culpa illo, sapiente tempora tempore voluptatum, atque eius
+            accusantium!</div>
+        </div>
+      </div>
+      <script src="./feedback.js"></script>
     </div>
   </div>
   <script src="../homepage/left-nav.js"></script>
-  <script src="./feedback.js"></script>
 </body>
 
 </html>
