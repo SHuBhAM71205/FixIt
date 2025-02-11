@@ -46,12 +46,7 @@
         <div class="no-history" onload="no_data">There is no feddback </div>
         <div class="trackHistory flex-col">
           <div class="hd flex-row">
-            <h6>Request Name</h6> <button class="feedback-btn">Feedback</button>
-            <script>
-              document.querySelector('.feedback-btn').addEventListener('click',()=>{
-                document.querySelector('.feedback-form').style.display='block';
-              })
-            </script>
+            <h6>Request Name</h6> <button class="feedback-btn" >Feedback</button>
           </div>
           <div class="Discription">
             Discription:</br>
@@ -60,6 +55,29 @@
             accusantium!</div>
         </div>
       </div>
+      <!-- Feedback Modal -->
+      <div class="feedback-modal" id="feedbackModal">
+        <div class="feedback-content">
+          <span class="close-btn" onclick="closeFeedbackForm()">&times;</span>
+          <h3>Submit Feedback</h3>
+
+          <!-- Star Rating -->
+          <div class="star-rating">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+          </div>
+
+          <!-- Feedback Textarea -->
+          <textarea id="feedbackText" placeholder="Write your feedback here..."></textarea>
+
+          <!-- Submit Button -->
+          <button onclick="submitFeedback()">Submit</button>
+        </div>
+      </div>
+
       <script src="./feedback.js"></script>
     </div>
   </div>
