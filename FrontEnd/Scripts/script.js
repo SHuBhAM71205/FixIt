@@ -7,6 +7,7 @@ let Navigation = document.querySelector("#navigation")
 let ContentCanvas = document.querySelector("#content-canvas")
 
 
+
 function RemoveActive() {
     let Links = document.querySelectorAll(".link-item");
 

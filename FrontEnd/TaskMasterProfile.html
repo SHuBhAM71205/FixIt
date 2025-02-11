@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>TaskMaster - profile</title>
     <script src="https://kit.fontawesome.com/7eb41a9bdc.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
+
     <link rel="stylesheet" href="./style.css">
+
+
 </head>
 
 <body>
@@ -64,91 +67,71 @@
     </div>
     <div id="content-canvas">
         <div class="canvas-heading">
-            Task Masters
-        </div>
-        <div class="search-TaskMaster">
-            <input type="text" id="search-taskmaster-text" placeholder="Search TaskMasters">
-            <div class="search-btn">
-                <i class="fa-solid fa-magnifying-glass fa-xl"></i>
-            </div>
-        </div>
-        
-        <div class="search-result">
-            <!-- <div class="no-result">
-                <div class="icon">
-                    <i class="fa-solid fa-circle-exclamation fa-xl ani-fade"></i>
-                </div>
-                <div class="text ani-fade">
-                    No Result found
-                </div>
-            </div> -->
-            <div class="yes-result">
-
-            </div>
+            TaskMaster - Jeel Kalathiya
         </div>
 
-        <div class="full-result-taskmaster">
-            <div class="taskmaster-comp">
-                <div class="taskmaster-status status-active">
-                    <i class="fa-solid fa-circle fa-2xs"></i>
+        <div class="taskmaster-profile">
+            
+            <div class="profile-left">
+                <div class="taskmaster-status">
+                    <div class="toggle-circle"></div>
                 </div>
-                <div class="taskmaster-more">
-                    <i class="fa-solid fa-arrow-right fa-lg"></i>
-                </div>
-                <div class="profile">
-                    <div class="profile-img">
-                        <img src="./Source/Default-profile-2.jpg" alt="">
-                    </div>
-                    <div class="profile-name">
-                        Jeel Kalathiya  
-                    </div>
-                </div>
-                <div class="work">
-                    <div class="work-text">
-                        Electrical
-                    </div>
-                    <div class="work-text">
-                        Plumbing
-                    </div>
-                </div>
-                <div class="loc">
-
-                </div>
-            </div>
-
-            <div class="taskmaster-comp">
-                <div class="taskmaster-status status-no-active">
-                    <i class="fa-solid fa-circle fa-2xs"></i>
-                </div>
-                <div class="taskmaster-more">
-                    <i class="fa-solid fa-arrow-right fa-lg"></i>
-                </div>
-                <div class="profile">
+                <div class="profile-user">
                     <div class="profile-img">
                         <img src="./Source/Default-profile-1.jpg" alt="">
                     </div>
                     <div class="profile-name">
-                        Jeel Kalathiya  
+                        Jeel Kalathiya
                     </div>
                 </div>
-                <div class="work">
-                    <div class="work-text">
-                        Electrical
-                    </div>
-                    <div class="work-text">
-                        Plumbing
-                    </div>
-                </div>
-                <div class="loc">
 
+                <div class="taskmaster-quality">
+                    <div class="taskmaster-speciality">
+                        <div class="speciality">
+                            <div class="speciality-icon"><i class="fa-solid fa-hammer"></i></div>
+                            <div class="speciallity-text">
+                                Carpentry
+                            </div>
+                        </div>
+                        <div class="speciality">
+                            <div class="speciality-icon"><i class="fa-solid fa-hammer"></i></div>
+                            <div class="speciallity-text">
+                                Plumbing
+                            </div>
+                        </div>
+                        <div class="speciality">
+                            <div class="speciality-icon"><i class="fa-solid fa-hammer"></i></div>
+                            <div class="speciallity-text">
+                                Electrical
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="taskmaster-contact">
+                        <div class="contact-call contact-details">
+                            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="contact-text">(+91) 9856743210</div>
+                        </div>
+                        <div class="contact-email contact-details">
+                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="contact-text">abc@gmail.com</div>
+                        </div>
+                        <div class="contact-location contact-details">
+                            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></i></div>
+                            <div class="contact-text">Surat - 395004</div>                            
+                        </div>
+                    </div>
                 </div>
             </div>
-                 
+            <div class="profile-right">
+
+            </div>
         </div>
-        
+         
     </div>
 
     <script src="./Scripts/script.js"></script>
+    <script src="./Scripts/navigation.js"></script>
 </body>
 
 </html>
