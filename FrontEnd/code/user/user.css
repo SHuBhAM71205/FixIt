@@ -5,6 +5,8 @@
     background-color : #DCF2F1;
 }
 
+
+
 /* ---------------------------general class---------------------------------------------------------- */
 
 *{
@@ -48,6 +50,9 @@ body{
     overflow-x:hidden;
 }
 
+.left-nav::-webkit-scrollbar{
+  display: none;
+}
 
 /* .left-nav:hover{
     height: 100vh;
