@@ -14,26 +14,41 @@
 <body>
   <div class=" homepg-body flex-row">
     <div class="left-nav flex-col">
-      <span class="a" onclick="handleclosebtn()" onmouseenter="">
-        <i class="fas fa-angle-double-left left-nav-open-close-button"></i>
+      <span class="a" onclick="handleclosebtn()">
+        <i class="fas fa-angle-double-left left-nav-open-close-button" ></i>
       </span>
-
+      <script>
+          
+          function handleclosebtn(){
+            document.querySelector('.left-nav').style.width='6vw';
+          }
+      </script>
       <div class="user-info-left-nav">
-        <span><img src="../../asset/man-icon-illustration-vector.jpg" alt="No image" id="user-img" /></span>
-      </div>
-
-      <div class="button" id="b3" onclick="window.location.href='../homepage/homePage.html'">
-        <a href="./homePage.html">Home</a>
-        </div>
-      <div class="button" id="b1" onclick="window.location.href='../requestServicepage/requestService.html'" >
-        Request
-        </div>
       
-      <div class="button" id="b5" onclick="window.location.href='./trackRequest.html'"> Track Request</div>
-      <div class="button" id="b4" onclick="window.location.href='../requestServicepage/requestService.html'"> History</div>
-      <div class="button" id="b2" onclick="window.location.href='../feedback/feedbach.html'"> Feedback</div>
-      <button id="logout">Log Out </button>
+        <span
+          ><img
+            src="../../asset/man-icon-illustration-vector.jpg"
+            alt="No image"
+            id="user-img"
+        /></span>
+      
+      </div>
+      <script src="./texttoicon.js"></script>
 
+      <div class="nav">
+        <div class="button" id="b3"  onclick="window.location.href='../homepage/homePage.html'">
+            Home
+          </div>
+        <div class="button" id="b1" onclick="window.location.href='../requestServicepage/requestService.html'" >
+          Request
+          </div>
+        
+        <div class="button" id="b5" onclick="window.location.href='./trackRequest.html'"> Track Request</div>
+        <div class="button" id="b4" onclick="window.location.href='../requestServicepage/requestService.html'"> History</div>
+        <div class="button" id="b2" onclick="window.location.href='../feedback/feedbach.html'"> Feedback</div>
+        <button id="logout">Log Out </button>
+
+      </div>
     </div>
     <div class="homepg-main-content flex-col">
       <div class="header flex-row">

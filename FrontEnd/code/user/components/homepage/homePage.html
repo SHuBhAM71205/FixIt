@@ -6,12 +6,13 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="../../user.css" />
     <script src="https://kit.fontawesome.com/7803942065.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
     <div class="flex-row homepg-body">
       <div class="left-nav flex-col">
         <span class="a" onclick="handleclosebtn()">
-          <i class="fas fa-angle-double-left left-nav-open-close-button" ></i>
+          <i class="material-icons close-btn left-nav-open-close-button" style="font-size:120% ;color:antiquewhite ; cursor:pointer">close</i>
         </span>
         <script>
             function handleclosebtn(){
@@ -19,7 +20,7 @@
             }
         </script>
         <div class="user-info-left-nav">
-          <span
+          <span onclick="opennav()"
             ><img
               src="../../asset/man-icon-illustration-vector.jpg"
               alt="No image"

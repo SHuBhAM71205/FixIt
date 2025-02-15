@@ -13,10 +13,7 @@ const btnClickHandle = (event) => {
   }
 
   button.style.backgroundColor = "white";
-  button.style.color = "black";
-  button.style.borderTopRightRadius = "0px";
-  
-  button.style.borderBottomRightRadius = "0px";
+  button.style.color = "blue";
   button.style.textOverflow = "clip";
 
   if (id === "b1") {
@@ -38,3 +35,9 @@ const btnClickHandle = (event) => {
 btns.forEach((button) => {
   button.addEventListener("click", btnClickHandle);
 });     
+
+
+
+function opennav(){
+  document.getElementsByClassName('left-nav')[0].style.width="20vw"
+}

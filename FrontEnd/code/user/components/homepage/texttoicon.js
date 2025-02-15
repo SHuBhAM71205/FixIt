@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     button.style.height="6vh";
                 }
             });
-            document.querySelector('.left-nav-open-close-button').style.visibility=isSmall?'hidden':'visible';
+            document.querySelector('.left-nav-open-close-button').style.display=isSmall?'none':'block';
+            
         }
     });
 
@@ -29,12 +30,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-
-// const collapse=document.querySelector('.left-nav-open-close-button')
-
-// const nav=document.querySelector('.left-nav')
-
-
-// collapse.addEventListener('click',()=>{
-//     nav.style.width='6vw';
-// });
