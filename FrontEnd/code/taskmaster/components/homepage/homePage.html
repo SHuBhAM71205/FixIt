@@ -1,57 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
-    <link rel="stylesheet" href="../../user.css" />
-    <script src="https://kit.fontawesome.com/7803942065.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  </head>
-  <body>
-    <div class="flex-row homepg-body">
-      <div class="left-nav flex-col">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page</title>
+  <link rel="stylesheet" href="../../user.css" />
+  <link rel="stylesheet" href="./homepage.css" />
+  <link rel="stylesheet" href="../../form-style.css" />
+  <script src="https://kit.fontawesome.com/7803942065.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <div class="flex-row homepg-body">
+    <div class="left-nav flex-col">
+      <div>
         <span class="a" onclick="handleclosebtn()">
-          <i class="material-icons close-btn left-nav-open-close-button" style="font-size:120% ;color:antiquewhite ; cursor:pointer">close</i>
+          <i class="material-icons close-btn left-nav-open-close-button"
+            style="font-size:120% ;color:antiquewhite ; cursor:pointer">close</i>
         </span>
         <script>
-            function handleclosebtn(){
-              document.querySelector('.left-nav').style.width='6vw';
-            }
+          function handleclosebtn() {
+            document.querySelector('.left-nav').style.width = '6vw';
+          }
         </script>
         <div class="user-info-left-nav">
-          <span onclick="opennav()"
-            ><img
-              src="../../asset/man-icon-illustration-vector.jpg"
-              alt="No image"
-              id="user-img"
-          /></span>
-        </div>
-        <script src="./texttoicon.js"></script>
-
-        <div class="nav">
-          <div class="button" id="b3"  onclick="window.location.href='./homePage.html'">
-              Home
-            </div>
-          <div class="button" id="b1" onclick="window.location.href='../requestServicepage/requestService.html'" >
-            Request
-            </div>
-          
-          <div class="button" id="b5" onclick="window.location.href='../trackRequest/trackRequest.html'"> Track Request</div>
-          <div class="button" id="b4" onclick="window.location.href='../requestServicepage/requestService.html'"> History</div>
-          <div class="button" id="b2" onclick="window.location.href='../feedback/feedbach.html'"> Feedback</div>
-          <button id="logout">Log Out </button>
-  
+          <span onclick="opennav()"><img src="../../asset/man-icon-illustration-vector.jpg" alt="No image"
+              id="user-img" /></span>
         </div>
       </div>
-      <div class="homepg-main-content flex-col">
-        <div class="header flex-row">
-          <h2>Home</h2>
-        </div>
-        <div class="history-track flex-col">
 
+      <script src="./texttoicon.js"></script>
+      <div class="nav">
+        <div class="btns">
+          <div class="button" id="b3" onclick="window.location.href='./homePage.html'">
+            Home
+          </div>
+
+          <div class="button" id="b5" onclick="window.location.href='../task/task.html'">
+            Task
+          </div>
+
+          <div class="button" id="b1" onclick="window.location.href='../stastic/stastic.html'">
+            stastic
+          </div>
+
+          <div class="button" id="b4" onclick="window.location.href='../history/history.html'">
+            History
+          </div>
         </div>
+        <button id="logout">Log Out </button>
+      </div>
     </div>
-    <script src="left-nav.js"></script>
-  </body>
+
+
+    <div class="homepg-main-content flex-col">
+      <div class="header flex-row">
+        <h2>Home</h2>
+      </div>
+
+      <div class="set-availability flex-col">
+        <span style="text-align: left; font-size:large;">Availability</span>
+        <label class="switch">
+          <input type="checkbox" id="availability-toggle" onchange="toggleAvailability()">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <h2>Suggestion</h2>
+      <!-- Task Requests Section -->
+      <div class="work-request flex-col">
+        <div class="no-task">There is no service request history to show</div>
+
+        <div class="task-suggestion flex-col">
+
+          <div id="owner-info" class="flex-row">
+            <div>
+              <p class="owner"><strong>Owner:</strong> John Doe</p>
+              <p class="owner"><strong>Location:</strong> New York, NY</p>
+            </div> 
+            <div class="task-image">
+              <img src="../../asset/man-icon-illustration-vector.jpg" alt="User">
+            </div>
+          </div>
+          <div class="task-details flex-row">
+            <div class="task-info flex-col">
+              <output id="device-name">Device: Fridge</output>
+              <output id="brand-name">Brand: Samsung</output>
+            </div>
+          </div>
+
+          <output id="problem-description">
+            Problem: The fridge is not cooling properly and making strange noises.
+          </output>
+          <div class="task-actions">
+            <button class="accept-btn" onclick="acceptTask()">Accept</button>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <script src="left-nav.js"></script>
+</body>
+
 </html>

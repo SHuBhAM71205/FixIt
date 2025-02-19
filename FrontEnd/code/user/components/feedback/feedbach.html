@@ -13,34 +13,48 @@
 
 <body>
   <div class="flex-row homepg-body">
-    <div class="left-nav flex-col">
-      <span class="a" onclick="handleclosebtn()">
-        <i class="fas fa-angle-double-left left-nav-open-close-button"></i>
-      </span>
-      <script>
-        function handleclosebtn() {
-          document.querySelector('.left-nav').style.width = '6vw';
-        }
-      </script>
-      <div class="user-info-left-nav">
-        <span><img src="../../asset/man-icon-illustration-vector.jpg" alt="No image" id="user-img" /></span>
-      </div>
-      <script src="../homepage/texttoicon.js"></script>
-
-      <div class="nav">
-        <div class="button" id="b3" onclick="window.location.href='../homepage/homePage.html'">
-          Home
+       <div class="left-nav flex-col">
+        <div>
+          <span class="a" onclick="handleclosebtn()">
+            <i class="material-icons close-btn left-nav-open-close-button" style="font-size:120% ;color:antiquewhite ; cursor:pointer">close</i>
+          </span>
+          <script>
+              function handleclosebtn(){
+                document.querySelector('.left-nav').style.width='6vw';
+              }
+          </script>
+          <div class="user-info-left-nav">
+            <span onclick="opennav()"
+              ><img
+                src="../../asset/man-icon-illustration-vector.jpg"
+                alt="No image"
+                id="user-img"
+            /></span>
           </div>
-        <div class="button" id="b1" onclick="window.location.href='../requestServicepage/requestService.html'" >
-          Request
-          </div>
+        </div>
         
-        <div class="button" id="b5" onclick="window.location.href='../trackRequest/trackRequest.html'"> Track Request</div>
-        <div class="button" id="b4" onclick="window.location.href='../requestServicepage/requestService.html'"> History</div>
-        <div class="button" id="b2" onclick="window.location.href='./feedbach.html'"> Feedback</div>
-        <button id="logout">Log Out </button>
+        <script src="./texttoicon.js"></script>
+        <div class="nav">
+          <div class="btns">
+            <div class="button" id="b3"  onclick="window.location.href='./homePage.html'">
+              Home
+            </div>
+
+            <div class="button" id="b5" onclick="window.location.href='../request/request.html'">Task</div>
+
+            <div class="button" id="b1" onclick="window.location.href='../stastic/stastic.html'" >
+              stastic
+            </div>
+            
+            <div class="button" id="b4" onclick="window.location.href='../stastic/stastic.html'" >
+              History
+            </div>
+
+          </div>  
+          <button id="logout">Log Out </button>
+        </div>
       </div>
-    </div>
+
     <div class="homepg-main-content flex-col">
       <div class="header flex-row">
         <h2>Feedback</h2>

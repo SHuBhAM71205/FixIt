@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page</title>
+  <link rel="stylesheet" href="../../user.css" />
+  <link rel="stylesheet" href="./history.css" />
+  <link rel="stylesheet" href="../../form-style.css" />
+  <script src="https://kit.fontawesome.com/7803942065.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <div class="flex-row homepg-body">
+    <div class="left-nav flex-col">
+      <div>
+        <span class="a" onclick="handleclosebtn()">
+          <i class="material-icons close-btn left-nav-open-close-button"
+            style="font-size:120% ;color:antiquewhite ; cursor:pointer">close</i>
+        </span>
+        <script>
+          function handleclosebtn() {
+            document.querySelector('.left-nav').style.width = '6vw';
+          }
+        </script>
+        <div class="user-info-left-nav">
+          <span onclick="opennav()"><img src="../../asset/man-icon-illustration-vector.jpg" alt="No image"
+              id="user-img" /></span>
+        </div>
+      </div>
+
+      <script src="../homepage/texttoicon.js"></script>
+      <div class="nav">
+        <div class="btns">
+          <div class="button" id="b3" onclick="window.location.href='../homepage/homePage.html'">
+            Home
+          </div>
+
+          <div class="button" id="b5" onclick="window.location.href='../task/task.html'">
+            Task
+          </div>
+
+          <div class="button" id="b1" onclick="window.location.href='../stastic/stastic.html'">
+            stastic
+          </div>
+
+          <div class="button" id="b4" onclick="window.location.href='./history.html'">
+            History
+          </div>
+        </div>
+        <button id="logout">Log Out </button>
+      </div>
+    </div>
+
+
+    <div class="homepg-main-content flex-col">
+      <div class="header flex-row">
+        <h2>History</h2>
+      </div>
+      <div class="history-track flex-col">
+        <div class="no-history" onload="no_data">There is no Service request history to show</div>
+
+        <div class="trackHistory flex-col">
+          Request Name</br>
+          
+          <div class="Discription">
+            Discription:
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sint unde magni accusamus harum assumenda esse cupiditate vel omnis perferendis nesciunt, culpa illo, sapiente tempora tempore voluptatum, atque eius accusantium!
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./addHistory.js"></script>
+  <script src="../homepage/left-nav.js"></script>
+</body>
+
+</html>

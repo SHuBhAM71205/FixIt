@@ -37,17 +37,15 @@ body{
 
 /* ------------------------leftnav---------------------- */
  .left-nav{
-    background-color : #0F1035;
-    height:100%;
-    width: 20vw;
-    align-items: center;
-    justify-content:space-around;
-    transition: width 1s  ease-in-out;
-    justify-content:space-evenly;
-    height: 100vh;
-    max-height: 100vh;
-    overflow-y:scroll;
-    overflow-x:hidden;
+  background-color : #0F1035;
+  height:100%;
+  width: 20vw;
+  align-items: center;
+  transition: width 1s  ease-in-out;
+  justify-content:stretch;
+  height: 100vh;
+  overflow-y:scroll;
+  overflow-x:hidden;
 }
 
 .left-nav::-webkit-scrollbar{
@@ -65,8 +63,11 @@ body{
 
 
 .left-nav-open-close-button{     
-    margin: 20px 20px 20px 20px;
     font-size: larger;
+    top:20px;
+    position: sticky;
+    justify-self:flex-end;
+    margin-left: 230px;
 }
 
 .left-nav-open-close-button:hover{
@@ -80,13 +81,17 @@ body{
     border: 2px solid rgb(115, 114, 126);
     align-content: center;
     justify-content: center;
-  
+    transition: all 2s ease-in-out;
 }
 
 
+
+.btns{
+  height:110%;
+}
 .a{
   padding-left: 80%;
-  padding-top: 10px;
+  padding-top: 0px;
 }
 
 .button{
@@ -110,7 +115,9 @@ body{
 
 .nav {
     width: 100%;
-    margin-bottom: 2vw;  
+    height: fit-content;
+    margin-bottom: 2vw;
+    justify-content:space-between;  
 }
 
 #logout{
