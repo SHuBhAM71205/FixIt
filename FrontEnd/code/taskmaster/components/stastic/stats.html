@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page</title>
+  <link rel="stylesheet" href="../../user.css" />
+  <link rel="stylesheet" href="../homepage/homepage.css" />
+  <link rel="stylesheet" href="../../form-style.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/7803942065.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .stat-card { background: #f8f9fa; padding: 20px; border-radius: 10px; text-align: center; }
+        .available { color: green; font-weight: bold; }
+        .not-available { color: red; font-weight: bold; }
+        .stats-cont{
+            width: 99%;            
+            font-family: sans-serif;
+            font-style: bold;
+            border-radius: 5px; 
+            border: 2px solid blueviolet;
+            background-color:rgba(47, 79, 79, 0.37);
+            justify-content: space-between;
+            align-items: center;
+            }
+        .stat-card{
+            background-color:rgba(47, 79, 79, 0.37);
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <div class="flex-row homepg-body">
+        <div class="left-nav flex-col">
+            <div>
+              <span class="a" onclick="handleclosebtn()">
+                <i class="material-icons close-btn left-nav-open-close-button"
+                  style="font-size:120% ;color:antiquewhite ; cursor:pointer">close</i>
+              </span>
+              <script>
+                function handleclosebtn() {
+                  document.querySelector('.left-nav').style.width = '6vw';
+                }
+              </script>
+              <div class="user-info-left-nav">
+                <span onclick="opennav()"><img src="../../asset/man-icon-illustration-vector.jpg" alt="No image"
+                    id="user-img" /></span>
+              </div>
+            </div>
+            <script src="../homepage/texttoicon.js"></script>
+            <div class="nav">
+              <div class="btns">
+                <div class="button" id="b3" onclick="window.location.href='../homepage/homePage.html'">
+                  Home
+                </div>
+      
+                <div class="button" id="b5" onclick="window.location.href='../task/task.html'">
+                  Task
+                </div>
+      
+                <div class="button" id="b1" onclick="window.location.href='./stats.html'">
+                  stastic
+                </div>
+      
+                <div class="button" id="b4" onclick="window.location.href='../history/history.html'">
+                  History
+                </div>
+                
+              </div>
+              <button id="logout">Log Out </button>
+            </div>
+          </div>
+        <div class="homepg-main-content flex-col">
+          <div class="header flex-row">
+            <h2>Task</h2>
+          </div>
+          <div class="">
+            <h4>Availability Status: <span id="availabilityStatus" class="available">OnWorking</span></h4>
+            <button class="btn btn-primary" onclick="toggleAvailability()">Toggle Availability</button>
+        </div>
+        <div  class="flex-row stats-cont">
+            
+                <div class="chart">
+                    <div class="no-of-task">
+                        <canvas id="taskChart"></canvas>
+                    </div>
+                    <div class="revenueChart">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="stats-card">
+                    <div>
+                        <h2 class="text-centr">TaskMaster Statistics</h2>
+                        <div class="card">
+                            <div class="stat-card">
+                                <h4>Total Tasks</h4>
+                                <p id="totalTasks">0</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="stat-card">
+                                <h4>Completed</h4>
+                                <p id="completedTasks">0</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="stat-card">
+                                <h4>Pending</h4>
+                                <p id="pendingTasks">0</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="stat-card">
+                                <h4>Rejected</h4>
+                                <p id="rejectedTasks">0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card offset-md-3">
+                            <h2>Revenue</h2>
+                            <div class="stat-card">
+                                <h4>Total Revenue</h4>
+                                <p id="totalRevenue">$0</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="stat-card">
+                                <h4>Average Revenue Per Task</h4>
+                                <p id="averageRevenue">$0</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            
+        </div>
+        <div>
+
+        </div>
+          <div  >
+            
+            
+           
+                
+    
+        
+            
+        </div>
+    
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let totalTasks = 50, completedTasks = 30, pendingTasks = 15, rejectedTasks = 5;
+                let totalRevenue = 1500, averageRevenue = totalRevenue / completedTasks;
+                
+                document.getElementById("totalTasks").innerText = totalTasks;
+                document.getElementById("completedTasks").innerText = completedTasks;
+                document.getElementById("pendingTasks").innerText = pendingTasks;
+                document.getElementById("rejectedTasks").innerText = rejectedTasks;
+                document.getElementById("totalRevenue").innerText = "$" + totalRevenue;
+                document.getElementById("averageRevenue").innerText = "$" + averageRevenue.toFixed(2);
+                
+                // Task Status Chart
+                const taskCtx = document.getElementById('taskChart').getContext('2d');
+                new Chart(taskCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Completed', 'Pending', 'Rejected'],
+                        datasets: [{
+                            label: 'Number of Tasks',
+                            data: [completedTasks, pendingTasks, rejectedTasks],
+                            backgroundColor: ['#28a745', '#ffc107', '#dc3545']
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: { beginAtZero: true }
+                        }
+                    }
+                });
+    
+                // Revenue Chart
+                const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+                new Chart(revenueCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                        datasets: [{
+                            label: 'Monthly Revenue ($)',
+                            data: [200, 180, 250, 300, 270, 400, 450, 430, 480, 500, 520, 600],
+                            borderColor: '#007bff',
+                            backgroundColor: 'rgba(0, 123, 0, 0.5)',
+                            fill: true
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: { beginAtZero: true }
+                        }
+                    }
+                });
+            });
+            
+            // Toggle Availability
+            function toggleAvailability() {
+                let status = document.getElementById("availabilityStatus");
+                if (status.classList.contains("available")) {
+                    status.innerText = "OffWorking";
+                    status.classList.replace("available", "not-available");
+                } else {
+                    status.innerText = "OnWorking";
+                    status.classList.replace("not-available", "available");
+                }
+            }
+        </script>
+        <script src="../homepage/left-nav.js"></script> 
+        </div>
+    </div>
+    <script src="../homepage/left-nav.js"></script>
+</body>
+
+</html>

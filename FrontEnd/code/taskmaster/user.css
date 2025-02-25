@@ -67,7 +67,7 @@ body{
     top:20px;
     position: sticky;
     justify-self:flex-end;
-    margin-left: 230px;
+    margin-left: 160%;
 }
 
 .left-nav-open-close-button:hover{
@@ -88,9 +88,11 @@ body{
 
 .btns{
   height:110%;
+  padding-bottom: 20%;
+  font-size: 90%;
 }
 .a{
-  padding-left: 80%;
+  padding-left: 10%;
   padding-top: 0px;
 }
 
