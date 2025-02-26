@@ -65,9 +65,10 @@ body{
 .left-nav-open-close-button{     
     font-size: larger;
     top:20px;
-    position: sticky;
+    position: relative;
     justify-self:flex-end;
-    margin-left: 160%;
+    right:-20px;
+    display: none;
 }
 
 .left-nav-open-close-button:hover{
@@ -97,21 +98,22 @@ body{
 }
 
 .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     color: aliceblue;
     border-radius: 10px;
     width: 90%;
-
+    font-size: 1.1em;
+    gap:5%;
     cursor: pointer;
     text-overflow: hidden ;
-    max-height: 30px;
-    /* padding-left: 2px;*/
-    padding-top: 5.5%;
-    margin-top: 4.7%;
-    margin-bottom: 4.7%;            
-    margin-left: 4.9%;
+    max-height: 20%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
     overflow: hidden;
-    text-align:center ;
 }
 
 
@@ -123,15 +125,17 @@ body{
 }
 
 #logout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     font-size: 1.1rem;
     color: rgb(219, 238, 255);
     background-color: rgb(255, 38, 0);
     border-radius: 10px;
     width: 70%;
-    margin-top: 27px;
-    margin-bottom: 27px;
-        
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #logout:hover{
@@ -153,6 +157,56 @@ body{
     padding: 2px 2px 2px 4px;
 }
 
+
+@media screen and (max-width :768px) {
+    .homepg-body
+    {
+      flex-direction: column;
+    }
+    .left-nav{
+      width: 100vw;
+      height: 10vh;
+      flex-direction: row;
+      transition: none;
+      justify-content: space-between;
+      align-items:center;
+      overflow-y: hidden;
+    }
+    .nav{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      
+    }
+    .btns{
+      display: flex;
+      flex-direction: row;
+      justify-content:center;
+      align-items: center;
+
+      padding-left: 10px;
+      margin-top: 16%;
+      margin-bottom: 0px;
+    }
+    .button{
+      width: 100px;
+    }
+    .homepg-main-content{
+      width: 90vw;
+    }
+    .a{
+      display: none;
+    }
+    #logout{
+      max-width: 5vw;
+      display: none;
+    }
+    .user-info-left-nav{
+      
+    }
+}
 
 /* -----------------------login-signup---------------------------- */
 
