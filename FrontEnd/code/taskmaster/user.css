@@ -184,6 +184,7 @@ body{
       max-height: 10vh;
       justify-content: center;
       align-items: center;
+      padding-top: 10px;
     }
     .btns{
       display: flex;
@@ -194,23 +195,26 @@ body{
       width: 80%;
       padding: 0px;
       margin: 0px;
+      
       overflow: hidden;
     }
     .button{
       margin: 0px;
       width: 7%;
       min-height: 50%;
-      font-size: .7em;
+      font-size: 1.0em;
       border-radius: 4px;
+
     }
     #logout{
       max-width: 10px;
-      font-size: 0.9em;
+      font-size: 0.8em;
       justify-content: center;
       align-items: center;
       display: flex;
       max-height: 5vh;
       border-radius: 4px;
+
     }
     .a{
       display: none;
@@ -236,6 +240,7 @@ body{
       display: flex;
       max-width: 10vh;
       padding-bottom: 20px;
+      padding-left: 10px;
     }
     #user-img{
       width: 30px;
