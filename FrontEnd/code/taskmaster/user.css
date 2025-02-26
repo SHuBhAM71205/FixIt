@@ -4,8 +4,8 @@
     background-color : #0F1035;
     background-color : #DCF2F1;
 }
-
-/* *{
+/* 
+*{
   border:2px solid #DCF2F1;
 } */
 
@@ -172,6 +172,7 @@ body{
       flex-direction: row;
       width: 100vw;
       height: 10vh;
+      transition: none;
     }
     .outer{
       max-height: 7vh;
@@ -180,31 +181,64 @@ body{
       display: flex;
       flex-direction: row;
       max-height: 10vh;
+      justify-content: center;
+      align-items: center;
     }
     .btns{
       display: flex;
       flex-direction: row;
+      justify-content:space-evenly;
+      align-items: center;
       height: 10vh;
-      width: 100%;
-      padding: 0%;
+      width: 80%;
+      padding: 0px;
+      margin: 0px;
+      overflow: hidden;
     }
     .button{
-      width: 10px;
-      height: 10px;
+      margin: 0px;
+      width: 7%;
+      min-height: 50%;
+      font-size: .7em;
+      border-radius: 4px;
     }
     #logout{
-      display: none;
-    }
-    #user-img{
-      height: 10px;
-    }
-    #user-info-left-nav{
-      height: 1vh;
-      padding: 0%;
-      margin: 0%;
+      max-width: 10px;
+      font-size: 0.9em;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      max-height: 10vh;
+      border-radius: 4px;
     }
     .a{
       display: none;
+    }
+    .outer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-height: 10vh;
+      
+    }
+    .user-info-left-nav{
+      display: flex;
+      justify-content:flex-start;
+      align-items:center;
+      padding: 0px;
+      margin: 0px;
+
+    }
+    .user-info-left-nav > span{
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      max-width: 10vh;
+      padding-bottom: 20px;
+    }
+    #user-img{
+      width: 30px;
+      transition: none;
     }
 }
 
