@@ -173,6 +173,7 @@ body{
       width: 100vw;
       height: 10vh;
       transition: none;
+      overflow-y: hidden;
     }
     .outer{
       max-height: 7vh;
@@ -208,7 +209,7 @@ body{
       justify-content: center;
       align-items: center;
       display: flex;
-      max-height: 10vh;
+      max-height: 5vh;
       border-radius: 4px;
     }
     .a{
