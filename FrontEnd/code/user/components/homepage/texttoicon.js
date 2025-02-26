@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const resizeObserver = new ResizeObserver(entries => {
         for (let entry of entries) {
-            let isSmall = entry.contentRect.width < 170; // Adjust breakpoint as needed
+            let isSmall = entry.contentRect.width < 170 || entry.contentRect.height<100; // Adjust breakpoint as needed
 
             buttonMappings.forEach(({ id, text, icon }) => {
                 const button = document.getElementById(id);
