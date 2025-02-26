@@ -1,0 +1,132 @@
+.no-task {
+    border: 2px solid blueviolet;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    background-color: rgba(47, 79, 79, 0.37);
+    font-size: x-large;
+    display: none; /* Hidden by default */
+}
+
+.history-track {
+    padding: 20px;
+}
+
+#owner-info{
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.task-actions{
+    display: flex;
+    width: 100%;
+    justify-content:space-between;
+    padding-right: 10px;
+    align-items:flex-start;
+}
+
+
+.owner{
+    text-align: start;
+}
+/* Task Suggestion Styling */
+.task-suggestion {
+    border: 2px solid blueviolet;
+    font-family: sans-serif;
+   
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(47, 79, 79, 0.37);
+    font-size: x-large;
+    height: 88px;
+    transition: height 2s 0.1s ease-out;
+    overflow: hidden;
+}
+
+/* Corrected Hover Effect */
+.task-suggestion:hover {
+    height :fit-content;
+}
+
+.task-image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.title {
+    font-size: x-large;
+}
+
+output {
+    margin: 10px;
+}
+
+/* Fixes for Problem Description */
+#Problem-Discription {
+    margin: 20px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 0.7em;
+    text-align: left;
+    max-width: 100%;
+}
+
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    margin-top: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+    transition: 0.4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: green;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}

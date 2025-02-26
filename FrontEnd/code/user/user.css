@@ -37,17 +37,15 @@ body{
 
 /* ------------------------leftnav---------------------- */
  .left-nav{
-    background-color : #0F1035;
-    height:100%;
-    width: 20vw;
-    align-items: center;
-    justify-content:space-around;
-    transition: width 1s  ease-in-out;
-    justify-content:space-evenly;
-    height: 100vh;
-    max-height: 100vh;
-    overflow-y:scroll;
-    overflow-x:hidden;
+  background-color : #0F1035;
+  height:100%;
+  width: 20vw;
+  align-items: center;
+  transition: width 1s  ease-in-out;
+  justify-content:stretch;
+  height: 100vh;
+  overflow-y:scroll;
+  overflow-x:hidden;
 }
 
 .left-nav::-webkit-scrollbar{
@@ -65,8 +63,11 @@ body{
 
 
 .left-nav-open-close-button{     
-    margin: 20px 20px 20px 20px;
     font-size: larger;
+    top:20px;
+    position: relative;
+    justify-self:flex-end;
+    right:-20px;
 }
 
 .left-nav-open-close-button:hover{
@@ -80,49 +81,60 @@ body{
     border: 2px solid rgb(115, 114, 126);
     align-content: center;
     justify-content: center;
-  
+    transition: all 2s ease-in-out;
 }
 
 
+
+.btns{
+  height:110%;
+  padding-bottom: 20%;
+  font-size: 90%;
+}
 .a{
-  padding-left: 80%;
-  padding-top: 10px;
+  padding-left: 10%;
+  padding-top: 0px;
 }
 
 .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     color: aliceblue;
     border-radius: 10px;
     width: 90%;
-
+    font-size: 1.1em;
+    gap:5%;
     cursor: pointer;
     text-overflow: hidden ;
-    max-height: 30px;
-    /* padding-left: 2px;*/
-    padding-top: 5.5%;
-    margin-top: 4.7%;
-    margin-bottom: 4.7%;            
-    margin-left: 4.9%;
+    max-height: 20%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
     overflow: hidden;
-    text-align:center ;
 }
 
 
 .nav {
     width: 100%;
-    margin-bottom: 2vw;  
+    height: fit-content;
+    margin-bottom: 2vw;
+    justify-content:space-between;  
 }
 
 #logout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     font-size: 1.1rem;
     color: rgb(219, 238, 255);
     background-color: rgb(255, 38, 0);
     border-radius: 10px;
     width: 70%;
-    margin-top: 27px;
-    margin-bottom: 27px;
-        
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #logout:hover{
@@ -152,9 +164,11 @@ body{
     flex-direction: column;
     min-width: 25vw;
     min-height: 25vh;
+    padding: 20px;
     border: 4px solid #00000036;
     border-radius: 8px;
 }
+
 
 .login-main-content{
     right:0px;
@@ -193,8 +207,6 @@ body{
 #Sign-up{
     color:antiquewhite;
     background-color: #0F1035;
-    
-
 }
 
 
@@ -209,22 +221,10 @@ body{
 
 input{
     height: 5vh;
-    width: 19vw;
+    width: 100%;
     border-radius: 8px;
     font-size: large;
     padding-left: 10px;
-}
-
-#submit-btn{
-    font-size: large;
-    background-color: #0F1035;
-    color: antiquewhite;
-    border-radius: 8px;
-    height: 7vh;
-    
-    margin-top: 40%;
-    margin-bottom: 4%;
-    width: 13vw;
 }
 
 
