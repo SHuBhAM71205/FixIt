@@ -16,14 +16,14 @@
 
 <body>
     <div id="navigation">
-        <button class="btn-trans" id="sidebar">
+        <button class="btn-trans toggle-hidden" id="sidebar">
             <i class="fa-solid fa-angles-left fa-2xl ani-pop"></i>
         </button>
-        <div class="brand">
+        <div class="brand toggle-hidden">
             <div class="brand-name">FixIt</div>
 
         </div>
-        <div class="profile">
+        <div class="profile toggle-hidden">
             <div class="profile-img">
                 <img src="./Source/Default-profile-3.jpg" alt="">
             </div>
@@ -33,34 +33,34 @@
         </div>
 
 
-        <ul class="link-container">
+        <ul class="link-container toggle-hidden">
             <li class="link-item" id="NavDashboard">
                 <a href="Dashboard.html">
                     <div class="link-icon"><i class="fa-solid fa-chart-simple fa-lg"></i></div>
-                <div class="link-text">Dashboard</div>
+                    <div class="link-text">Dashboard</div>
                 </a>
             </li>
-            <li class="link-item" id="NavRequests">
+            <li class="link-item active" id="NavRequests">
                 <a href="Requests.html">
                     <div class="link-icon"><i class="fa-solid fa-bullhorn fa-lg"></i></div>
-                <div class="link-text">Requests</div>
+                    <div class="link-text">Requests</div>
                 </a>
             </li>
-            <li class="link-item active" id="NavTaskMasters">
+            <li class="link-item" id="NavTaskMasters">
                 <a href="TaskMasters.html">
                     <div class="link-icon"><i class="fa-solid fa-users fa-lg"></i></div>
-                <div class="link-text">Task Masters</div>
+                    <div class="link-text">Task Masters</div>
                 </a>
             </li>
             <li class="link-item" id="NavReports">
                 <a href="Reports.html">
                     <div class="link-icon"><i class="fa-solid fa-file-lines fa-lg"></i></div>
-                <div class="link-text">Reports</div>
+                    <div class="link-text">Reports</div>
                 </a>
             </li>
         </ul>
 
-        <button class="btn-logout">
+        <button class="btn-logout toggle-hidden">
             Log Out
         </button>
 
@@ -71,14 +71,15 @@
         </div>
 
         <div class="taskmaster-profile">
-            
             <div class="profile-left">
-                <div class="taskmaster-status">
-                    <div class="toggle-circle"></div>
+                <div id="active-deactive" class="taskmaster-status">
+                    <div class="toggle-circle">
+
+                    </div>
                 </div>
                 <div class="profile-user">
                     <div class="profile-img">
-                        <img src="./Source/Default-profile-1.jpg" alt="">
+                        <img src="./Source/Default-profile-4.jpg" alt="">
                     </div>
                     <div class="profile-name">
                         Jeel Kalathiya
@@ -89,23 +90,22 @@
                     <div class="taskmaster-speciality">
                         <div class="speciality">
                             <div class="speciality-icon"><i class="fa-solid fa-hammer"></i></div>
-                            <div class="speciallity-text">
+                            <div class="speciality-text">
                                 Carpentry
                             </div>
                         </div>
                         <div class="speciality">
                             <div class="speciality-icon"><i class="fa-solid fa-hammer"></i></div>
-                            <div class="speciallity-text">
+                            <div class="speciality-text">
                                 Plumbing
                             </div>
                         </div>
                         <div class="speciality">
                             <div class="speciality-icon"><i class="fa-solid fa-hammer"></i></div>
-                            <div class="speciallity-text">
+                            <div class="speciality-text">
                                 Electrical
                             </div>
                         </div>
-
                     </div>
                     <div class="taskmaster-contact">
                         <div class="contact-call contact-details">
@@ -118,20 +118,22 @@
                         </div>
                         <div class="contact-location contact-details">
                             <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></i></div>
-                            <div class="contact-text">Surat - 395004</div>                            
+                            <div class="contact-text">Surat - 395004</div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="profile-right">
 
+            <div class="profile-right">
+                
             </div>
         </div>
-         
+
     </div>
 
     <script src="./Scripts/script.js"></script>
     <script src="./Scripts/navigation.js"></script>
+    <script src="./Scripts/TaskMasterProfile.js"></script>
 </body>
 
 </html>

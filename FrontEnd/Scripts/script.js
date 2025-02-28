@@ -16,46 +16,6 @@ function RemoveActive() {
     )
 }
 
-function ShowOnlyChild(parent, child) {
-    let children = parent.children;
-
-    for (let item of children) {
-        if (item != child) {
-            item.style.display = "none";
-        }
-    }
-}
-
-function ShowAllChild(parent) {
-    let children = parent.children;
-    for (let item of children) {
-        item.style.display = "flex";
-    }
-}
-
-// toggle side bar
-sidebar.onclick = () => {
-    if (Navigation.classList.contains("hidden")) {
-        Navigation.classList.remove("hidden");
-        sidebar.innerHTML = '<i class="fa-solid fa-angles-left fa-2xl ani-pop"></i>';
-        Navigation.style.width = "20%";
-        ContentCanvas.style.width = "80%";
-        setTimeout(() => {
-            ShowAllChild(Navigation);
-        }, 250);
-
-    } else {
-        Navigation.classList.add("hidden");
-        sidebar.innerHTML = '<i class="fa-solid fa-angles-right fa-2xl ani-pop"></i>'
-        setTimeout(() => {
-            ShowOnlyChild(Navigation, sidebar);
-        }, 250);
-        Navigation.style.width = "5%";
-        ContentCanvas.style.width = "95%"
-
-    }
-}
-
 NavDashboard.onclick = () => {
     RemoveActive();
     NavDashboard.classList.add("active");
@@ -83,7 +43,7 @@ function drawChart() {
         ['Tuesday', 1170, 460],
         ['Wednesday', 660, 1120],
         ['Thursday', 1030, 540],
-        ['Friday',1000,300],
+        ['Friday', 1000, 300],
     ]);
 
     var options = {
